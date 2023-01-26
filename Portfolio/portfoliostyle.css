@@ -1,6 +1,52 @@
 body{
     background-image: url(images/background.jpg);
 }
+@media only screen and (max-width: 800px) {
+    body {
+      background-image: url(images/background2.jpg);
+    }
+}
+@media only screen and (min-width:350px) and (max-width:365px) { 
+    h1, h2 { font-size: 100%; } 
+    span { font-size: 80%;     } 
+    figure { display: none;} 
+    nav, nav ul, nav li { padding: 0; } 
+    nav li { display: block; }
+    nav a { display: block; 
+            padding: 0.5em 0;
+            border-bottom: 2px ridge #00005D; } 
+    } 
+    footer{ 
+        bottom: 0; 
+        left: 50%; 
+        text-align: center; 
+        color: #eee; 
+        margin-bottom: 20px;
+    } 
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){ 
+        .contact .row{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 7rem;
+            align-items: center;
+        }
+    }
+    @media (max-width: 1000px){
+        footer{
+            display: none;
+        }
+        body{
+            display: inline;
+            overflow-y: inherit;
+        }
+        header{
+            width:100%; 
+            display: inline; 
+        } 
+        .share{
+            display: none; 
+        }
+    }
 .wrapper{
     width: 80%;
     margin: auto;
@@ -107,11 +153,10 @@ main{
 
 .home .share{
     position: relative;
-    transform: translateX(-50%);
     display: flex;
     padding:1rem;
     border-radius: 1rem;
-    margin-left: 60%;
+    margin-left: 30%;
     margin-right: 30%;
     background: #4D4D4D;
     box-shadow: 0 1rem 2rem #4D4D4D;
@@ -211,6 +256,7 @@ main{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    flex-flow: column;
 }
 .certification .box-container .box{
     margin: 2%;
@@ -240,11 +286,14 @@ main{
 }
 
 .education .box-container .box{
+    display: flex;
     width:37rem;
     padding:0 2rem;
     padding-bottom: 1rem;
     border-left: .2rem solid #065D70;
     margin-left: 5%;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
 .education .box-container .box .year{
@@ -252,6 +301,9 @@ main{
     position: relative;
     color: #4D4D4D;
     font-family: "Comic Sans MS";
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
 .education .box-container .box .year::before{
@@ -263,10 +315,14 @@ main{
     width: 2rem;
     border-radius: 50%;
     background:#065D70;
+    display: flex;
+    flex-flow: column;
 }
 
 .education .box-container .box h3{
     font-size: 1.5rem;
+    display: flex;
+    flex-flow: column;
     padding-top: .3rem;
     font-family: "Comic Sans MS";
     color: #4D4D4D;
