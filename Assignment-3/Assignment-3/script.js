@@ -16,7 +16,6 @@
 // var t = new Title("CONNECT WITH ME!");
 
 var countOfRows = 3;
-//var globalIndex = 0;
 var latestIndex = 0;
 
 function addNewRow() {
@@ -31,24 +30,6 @@ function addNewRow() {
   else {
     latestIndex = 1;
   }
-
-  // if(globalIndex==0){
-  //   var lastStudent = currentTable.lastElementChild.lastElementChild?.previousElementSibling?.firstElementChild?.nextElementSibling?.innerHTML || "Student 0"; 
-  //   globalIndex = 1 + parseInt(lastStudent.split(" ")[1]);
-  //   console.log(lastStudent);
-  // }else globalIndex++;
-
-  // if(countOfRows==0)
-  // globalIndex=1;
-  // if(countOfRows==1 && globalIndex!=0)
-  // globalIndex=2;
-  // if(countOfRows==2 && globalIndex!=0 )
-  // globalIndex =3;
-
-  // if((globalIndex - countOfRows) >= 2)
-  // globalIndex= countOfRows+1;
-
-  // console.log(globalIndex)
 
   var tdNode1 = document.createElement("tr");
   
