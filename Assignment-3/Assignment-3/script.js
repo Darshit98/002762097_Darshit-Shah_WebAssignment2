@@ -16,33 +16,43 @@
 // var t = new Title("CONNECT WITH ME!");
 
 var countOfRows = 3;
-var globalIndex = 0;
+//var globalIndex = 0;
+var latestIndex = 0;
 
 function addNewRow() {
   var currentTable = document.getElementById("myTable");
   var tbodyRef = document.getElementsByTagName("tbody")[0];
 
-  if(globalIndex==0){
-    var lastStudent = currentTable.lastElementChild.lastElementChild?.previousElementSibling?.firstElementChild?.nextElementSibling?.innerHTML || "Student 0"; 
-    globalIndex = 1 + parseInt(lastStudent.split(" ")[1]);
-    console.log(lastStudent);
-  }else globalIndex++;
+  var rows = document.getElementById("myTable").rows;
+  var latestIndex;
+  if (rows.length > 1) {
+    latestIndex = parseInt(rows[rows.length - 2].firstElementChild.nextElementSibling.innerHTML.split(" ")[1]) + 1;
+  }
+  else {
+    latestIndex = 1;
+  }
 
-  if(countOfRows==0)
-  globalIndex=1;
-  if(countOfRows==1 && globalIndex!=0)
-  globalIndex=2;
-  if(countOfRows==2 && globalIndex!=0 )
-  globalIndex =3;
+  // if(globalIndex==0){
+  //   var lastStudent = currentTable.lastElementChild.lastElementChild?.previousElementSibling?.firstElementChild?.nextElementSibling?.innerHTML || "Student 0"; 
+  //   globalIndex = 1 + parseInt(lastStudent.split(" ")[1]);
+  //   console.log(lastStudent);
+  // }else globalIndex++;
 
-  if((globalIndex - countOfRows) >= 2)
-  globalIndex= countOfRows+1;
+  // if(countOfRows==0)
+  // globalIndex=1;
+  // if(countOfRows==1 && globalIndex!=0)
+  // globalIndex=2;
+  // if(countOfRows==2 && globalIndex!=0 )
+  // globalIndex =3;
 
-  console.log(globalIndex)
+  // if((globalIndex - countOfRows) >= 2)
+  // globalIndex= countOfRows+1;
+
+  // console.log(globalIndex)
 
   var tdNode1 = document.createElement("tr");
   
-  var parameter = "dropDownTextArea" + globalIndex;
+  var parameter = "dropDownTextArea" + latestIndex;
 
   
   var trCheckBoxCell = document.createElement("td");
@@ -50,10 +60,10 @@ function addNewRow() {
      `<input id="checkbox" type="checkbox" onclick="onCheckboxClick(this)"/> <br /><br /><img src="down.png" width="25px" onclick="displayHiddenRow('${parameter}')"/>`;
   
   var trStudentCell = document.createElement("td");
-  trStudentCell.innerHTML = "Student " + (globalIndex);
+  trStudentCell.innerHTML = "Student " + (latestIndex);
   
   var trTeacherCell = document.createElement("td");
-  trTeacherCell.innerHTML = "Teacher " + (globalIndex);
+  trTeacherCell.innerHTML = "Teacher " + (latestIndex);
 
   var trAwardCell = document.createElement("td");
   trAwardCell.innerHTML = "Approved";
@@ -83,7 +93,7 @@ function addNewRow() {
 
   var tdnode2 = document.createElement("tr");
   tdnode2.className="dropDownTextArea";
-  tdnode2.id = "dropDownTextArea"+ (globalIndex)
+  tdnode2.id = "dropDownTextArea"+ (latestIndex)
   console.log(tdnode2.id);
   tdnode2.style.display="none";
 
