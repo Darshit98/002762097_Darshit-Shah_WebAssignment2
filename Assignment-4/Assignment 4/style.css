@@ -1,0 +1,47 @@
+body{
+    font-family: "Comic Sans MS";
+}
+label {	
+    float: left;
+    width: 150px;}
+#container{
+    width: 700px;
+    margin: auto;
+    background-color: rgb(199, 199, 133);
+} 
+main{
+    padding: 50px;
+}
+.table{
+    border-color: grey;
+    align-items: center;
+}
+table {
+    width: fit-content;
+    margin: auto;
+    text-align: left;				
+}
+table, th, td {  
+    border: none;
+}
+th{
+    background-color: grey;
+    color: aliceblue;
+    text-align: center;
+}
+tr{
+    color: rgb(83, 81, 81);
+    background-color: seashell;   
+}
+p{
+    text-align: center;
+    font-size: large;
+}
+@media screen and (max-width: 600px) {
+    table {width:100%;}
+    div {width:100%;}
+    form {width:100%;}
+ }
+ @media screen and (max-width: 360px) {
+    table {width:100%;}
+}
