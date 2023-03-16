@@ -1,0 +1,124 @@
+img {
+  border: solid 1px aliceblue;
+  margin: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/Background4.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 80px;
+}
+.nav-bar .title {
+  color: darkgray;
+  font-size: 51px;
+  font-family: cursive;
+  font-weight: 500;
+}
+.nav-bar p {
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 10px;
+  color: darkgray;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+span {
+  color: gold;
+}
+
+.menu li {
+  list-style: none;
+  display: inline-block;
+}
+.menu li a {
+  text-decoration: none;
+  color: aliceblue;
+  margin-left: 20px;
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: 500;
+}
+.menu li a:hover {
+  color: brown;
+  padding: 10px;
+}
+
+.home {
+  height: 370px;
+  padding: 50px;
+}
+
+.title-1 {
+  color: aliceblue;
+  font-weight: 500;
+}
+
+.menu-table {
+  height: 370px;
+  padding: 50px;
+  color: aliceblue;
+}
+
+td:nth-child(even) {
+  color: aliceblue;
+  font-family: cursive;
+  font-size: 18px;
+}
+
+.signup-table button {
+  height: 42px;
+  color: brown;
+  background: aliceblue;
+  padding: 5px 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: cursive;
+  font-size: 21px;
+}
+
+.signup-table {
+  height: 370px;
+  padding: 50px;
+  color: aliceblue;
+}
+.signup-table button:hover {
+  border: 2px solid aliceblue;
+}
+
+td {
+  font-size: 20px;
+  font-family: cursive;
+}
+
+td input {
+  font-size: 2 20px;
+  font-family: cursive;
+}
+
+:root {
+  --primary:aliceblue;
+  --ff:"Times New Roman";
+}
+
+.home .title-1 {
+  font-family: var(--ff);
+  font-style: italic;
+  font-size: 48px;
+  text-align: left;
+}/*# sourceMappingURL=style.css.map */

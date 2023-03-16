@@ -1,0 +1,4 @@
+//Function
+@function double($size){
+    @return $size * 2;
+}
