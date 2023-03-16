@@ -1,0 +1,17 @@
+SCSS Features:
+
+Variable: They are used to asign a value to a name with a $ symbol and you can later refer to that name instead of the value itself. It is used in define background color, size, border and allignment.
+
+Custom properties: This are entities that contain specific values which can be reused throughout the document. It is used for background color and font style.
+
+Nesting: It is combining multiple CSS rules with one another. I have used nesting with button.
+
+Interpolation: It is an insertion of sass expression in css code. I have used it for border in my code.
+
+Placeholder selectors: It is a special kind of selector which acts like a class selector and it starts with % symbol which is not included in the css output. I have used it with button.
+
+Mixins: It allows to define styles that can be reused throughout the stylesheet. I have used it with font size and style.
+
+Functions: It allows to define complex operations in sass which you can reuse ultiple times throughout the stylesheet. I have used it to make the text size double.
+
+CSS Grid/ Flexbox: Used grid layout to create cards for coffee and flex for the images included.
